@@ -27,4 +27,21 @@ jQuery(document).ready(function() {
     jQuery('[data-text-hide]').click(function(){
     	jQuery('.top__hidden').fadeOut();
     });
+
+    jQuery('[data-call]').click(function(){
+    	jQuery('.rpk-popup-call').addClass('rpk-popup-call_show');
+    });
+
+	jQuery('.rpk-popup-call__overlay').click(function() {
+    		jQuery('.rpk-popup-call').removeClass('rpk-popup-call_show');
+	});
+
+	jQuery('[data-application]').click(function(){
+    	jQuery('.rpk-popup-application').addClass('rpk-popup-application_show');
+    });
+
+    jQuery('.rpk-popup-application__overlay').click(function() {
+    		jQuery('.rpk-popup-application').removeClass('rpk-popup-application_show');
+	});
+
 });

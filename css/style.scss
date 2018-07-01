@@ -8,13 +8,13 @@ input {
 button,
 .button{
 	font-size: 14px;
-	line-height: 1;
+	line-height: 30px;
 	text-transform: uppercase;
 	border: none;
 	background: #f8ba00;
 	color: #FFF;
 	margin: 20px auto 0;
-	padding: 10px 30px;
+	padding: 0 30px;
 	font-weight: 700;
 	cursor: pointer;
 	-webkit-border-radius: 5px;
@@ -44,9 +44,9 @@ button,
 		color: #fff;
 		font-weight: 700;
 		font-size: 18px;
-		line-height: 29px;
+		line-height: 45px;
 		background: #fece45;
-		padding-right: 20px;
+		padding: 0 20px 0 0;
 		text-align: center;
 		cursor: pointer;
 		border: none;
@@ -107,11 +107,10 @@ button,
 		display: inline-block;
 		color: #fff;
 		font-size: 18px;
-		line-height: 26px;
+		line-height: 45px;
 		text-decoration: none;
 		font-weight: 700;
 		position: relative;
-		padding: 10px 0;
 
 		&:after{
 			content: "";
@@ -870,4 +869,160 @@ button,
 	&_show {
 		opacity: 1;
 	}
+}
+
+
+.rpk-popup-call {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	transform: translateY(-100%);
+	z-index: 99;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	transition: transform .5s ease-in;
+
+	&_show {
+		transform: translateY(0);
+	}
+
+	&__overlay {
+		background: rgba(0, 0,0, .5);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__form-outer {
+		background: rgba(0, 0,0, .9);
+		padding: 30px;
+		position: relative;
+		z-index: 100;
+	}
+
+	&__title {
+		font-size: 20px;
+		line-height: 32px;
+		color: #FFF;
+		text-align: center;
+		margin: auto;
+		max-width: 400px;
+		position: relative;
+		padding-top: 110px;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #FECE45;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 90px;
+			height: 90px;
+			background: url(../img/logo.png) no-repeat center center;
+			-webkit-background-size: contain;
+			-o-background-size: contain;
+			background-size: contain;
+		}
+	}
+
+	&__form {
+		input {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+			font-size: 22px;
+			line-height: 28px;
+			padding-left: 10px;
+		}
+
+		button {
+			display: block;
+			margin: auto;
+		}
+	}
+}
+
+
+.rpk-popup-application {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	transform: translateX(100%);
+	z-index: 99;
+	display: flex;
+	transition: transform .5s ease-in;
+
+	&_show {
+		transform: translateX(0);
+	}
+
+	&__overlay {
+		background: rgba(0, 0,0, .5);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__title {
+		font-size: 26px;
+	line-height: 32px;
+		color: #FFF;
+		text-align: center;
+		margin: auto;
+		max-width: 400px;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #FECE45;
+	}
+
+	&__form-outer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 500px;
+		height: 100%;
+		z-index: 100;
+		background: rgba(0, 0,0, .9);
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-align-items: center;
+		        align-items: center;
+	}
+
+	&__form-inner{
+		padding: 0 20px;
+
+	}
+
+	&__form {
+		input {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+			font-size: 22px;
+			line-height: 28px;
+			padding-left: 10px;
+		}
+
+		button {
+			display: block;
+			margin: auto;
+		}
+	}
+
 }
